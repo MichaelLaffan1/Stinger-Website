@@ -1,1 +1,9 @@
-/* Start of CSS */
+body{
+    background-color: #545454;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+head{
+    color: yellow;
+}
