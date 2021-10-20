@@ -1,0 +1,23 @@
+#profile_text{
+    text-align: left;
+}
+#background{
+    background-image: url(background-image.png);
+    background-size: cover;
+    height:100px;
+    padding-top:80px;
+}
+#photo_text{
+    text-align: left;
+    color: black;
+}
+#photo{
+    position: relative;
+    top: 20px;
+    left: 15px;
+    height: 100px;
+    padding: 125px;
+}
+hr{
+    margin-top: 50px;
+}
