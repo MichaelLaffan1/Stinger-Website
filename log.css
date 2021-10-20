@@ -1,0 +1,59 @@
+body{
+    background-image: url(stinger.jpg);
+    background-position: center;
+}
+#stinger{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-weight: bold;
+}
+#statement{
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+#headline{
+    text-align: center;
+    color: #d3eb34;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#username{
+    margin-left: 35%;
+    color: #e5eb34;
+    font-family: Candara;
+}
+#userbox{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#password{
+    margin-left: 35%;
+    color: red;
+}
+#passcode{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#login_button{
+    position: absolute;
+    border-radius: 9px;
+    color: black;
+    font-weight: bold;
+    margin-left: 39.5%;
+    width: 20%;
+}
+#sentence{
+    text-align: center;
+    font-family: Tahoma;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
