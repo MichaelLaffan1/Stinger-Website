@@ -1,0 +1,74 @@
+#stinger{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-weight: bold;
+}
+#statement{
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+#fname{
+    margin-left: 35%;
+    color: #e5eb34;
+    font-family: Candara;
+}
+#fnamebox{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#lname{
+    margin-left: 35%;
+    color: #e5eb34;
+    font-family: Candara;
+}
+#lnamebox{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#username{
+    margin-left: 35%;
+    color: #e5eb34;
+    font-family: Candara;
+}
+#userbox{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#password{
+    margin-left: 35%;
+    color: red;
+    font-family: Candara;
+}
+#passcode{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#signup_button{
+    position: absolute;
+    border-radius: 9px;
+    color: black;
+    font-weight: bold;
+    margin-left: 39.5%;
+    width: 20%;
+}
+#sentence{
+    text-align: center;
+    font-family: Tahoma;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
