@@ -1,0 +1,26 @@
+body{
+    background-color: #545454;
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 100px;
+    margin-right: 300px;
+
+
+}
+head{
+    color: yellow;
+}
+
+a:link {
+    color:#ffffff
+}
+
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color:orange
+}
