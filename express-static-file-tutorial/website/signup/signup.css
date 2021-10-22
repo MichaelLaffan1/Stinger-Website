@@ -1,18 +1,21 @@
 #stinger{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    color: red;
+    color: #b8b212;
     font-weight: bold;
+}
+body{
+    background-color:#85640b;
 }
 #statement{
     text-align: center;
-    color: green;
+    color: black;
     font-weight: bold;
 }
 #fname{
     margin-left: 35%;
-    color: #e5eb34;
-    font-family: Candara;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 #fnamebox{
     position: absolute;
@@ -23,8 +26,8 @@
 }
 #lname{
     margin-left: 35%;
-    color: #e5eb34;
-    font-family: Candara;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 #lnamebox{
     position: absolute;
@@ -35,8 +38,8 @@
 }
 #username{
     margin-left: 35%;
-    color: #e5eb34;
-    font-family: Candara;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 #userbox{
     position: absolute;
@@ -47,8 +50,8 @@
 }
 #password{
     margin-left: 35%;
-    color: red;
-    font-family: Candara;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 #passcode{
     position: absolute;
@@ -68,7 +71,7 @@
 #sentence{
     text-align: center;
     font-family: Tahoma;
-    color: red;
+    color: #394d4d;
     font-weight: bold;
     font-size: 20px;
 }
