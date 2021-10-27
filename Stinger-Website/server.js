@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
     res.send('index.html', { root: __dirname });
 });
 
+app.set('view engine', 'ejs');
 
 app.get('/profile', (req, res) => {
     res.send('./server.js/profile.html', { root: __dirname });
