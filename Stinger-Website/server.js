@@ -3,6 +3,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 app.set('view engine', 'ejs');
 
 app.use(express.static('website'));
@@ -19,12 +24,13 @@ app.get('/login', (req, res) => {
     res.send('./server.js/login.html', { root: __dirname });
 });
 
+app.post('/login', urlencodedParser, function(req, res){
+    console.log(req.body);
+});
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 app.post('/signup', urlencodedParser, function(req,res){
     console.log(req.body);
-    res.render('signup', {qs: req.query});
-
 });
 
 
