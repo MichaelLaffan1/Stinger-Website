@@ -1,0 +1,43 @@
+body{
+    background-color: #545454;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+head{
+    color: yellow;
+}
+
+a {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    color: orange;
+    height: 30px;
+  }
+
+a:link {
+    text-decoration: none;
+}
+
+header {  
+    background-color: rgb(112, 75, 7);  
+    position: fixed;  
+    left: 300px;  
+    right: 300px;  
+    top: 0px;  
+    height: 20px;  
+    display: solid;  
+    align-items: center;  
+}  
+
+header * {  
+    display: inline;
+}  
+
+header li {  
+    margin: 60px;  
+}  
