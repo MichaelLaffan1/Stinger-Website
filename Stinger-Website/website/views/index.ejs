@@ -6,19 +6,16 @@
     <nav>  
     <ul>  
     <li>  
-    <a onclick="window.open('index.html', '_blank')">Home</a>  
+    <a onclick="window.moveTo('index', '_blank')">Home</a>  
     </li>  
     <li>  
-    <a onclick="window.open('./login-page/login.html', '_blank')">Login</a>  
-    </li> <br> 
-    <li>  
-    <a onclick="window.open('./signup/signup.html', '_blank')">Sign Up</a>  
+    <a href="./login-page/login.html">Login</a>  
     </li>
     <li>  
-    <a onclick="window.open('./contact-page/contact.html', '_blank')">Contact</a>  
+    <a href="./contact-page/contact.html">Contact</a>  
     </li>  
     <li> 
-    <a onclick="window.open('#', '_blank')">About</a>  
+    <a onclick="window.moveTo('#', '_blank')">About</a>  
     </li>  
     </ul>  
     </nav>  
@@ -112,5 +109,6 @@
     <script src="script.js"></script>
 
 </body>
+<%- include('./partials/footer.ejs') %>
 
 </html>
