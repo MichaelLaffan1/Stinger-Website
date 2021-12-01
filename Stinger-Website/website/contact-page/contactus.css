@@ -91,6 +91,7 @@ a {
     padding: 10px;
     color: orange;
     height: 30px;
+    font-family: 'Poppins', sans-serif;
   }
 
 a:link {
@@ -113,5 +114,5 @@ header * {
 }  
 
 header li {  
-    margin: 80px;  
+    margin: 75px;  
 }  
