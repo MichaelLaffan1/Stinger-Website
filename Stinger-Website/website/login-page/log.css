@@ -4,7 +4,7 @@ body{
 }
 #stinger{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color: #d3eb34;
     font-weight: bold;
 }
@@ -12,7 +12,7 @@ body{
     text-align: center;
     color: #d3eb34;
     font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #headline{
     text-align: center;
