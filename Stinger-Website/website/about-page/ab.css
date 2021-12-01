@@ -69,37 +69,36 @@
 	color:#3d3d3d;
 }
 @media screen and (max-width: 768px){
-	.container{
-	width: 80%;
-	display: block;
-	margin:auto;
-	padding-top:50px;
-}
-.content-section{
-	float:none;
-	width:100%;
-	display: block;
-	margin:auto;
-}
-.image-section{
-	float:none;
-	width:100%;
-	
-}
-.image-section img{
-	width: 100%;
-	height: auto;
-	display: block;
-	margin:auto;
-}
-.content-section .title{
-	text-align: center;
-	font-size: 19px;
-}
-.content-section .content .button{
-	text-align: center;
-}
-
+		.container{
+		width: 80%;
+		display: block;
+		margin:auto;
+		padding-top:50px;
+	}
+	.content-section{
+		float:none;
+		width:100%;
+		display: block;
+		margin:auto;
+	}
+	.image-section{
+		float:none;
+		width:100%;
+		
+	}
+	.image-section img{
+		width: 100%;
+		height: auto;
+		display: block;
+		margin:auto;
+	}
+	.content-section .title{
+		text-align: center;
+		font-size: 19px;
+	}
+	.content-section .content .button{
+		text-align: center;
+	}
 }
 
 a {
