@@ -84,7 +84,7 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/about', (req, res) => {
+app.get('/signup', (req, res) => {
     res.render('signup');
 });
 

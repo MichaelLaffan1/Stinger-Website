@@ -1,23 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 #stinger{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: #b8b212;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
     font-weight: bold;
 }
 body{
-    background-color:#85640b;
+    background-image: url('trees.jpg');
+    background-size: cover;
 }
 #statement{
     text-align: center;
-    color: black;
+    color: white;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #fname{
     margin-left: 35%;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
 }
 #fnamebox{
+    background-color: white;
     position: absolute;
     margin-left: 39%;
     width: 20%;
@@ -26,10 +35,12 @@ body{
 }
 #lname{
     margin-left: 35%;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #lnamebox{
+    background-color: white;
     position: absolute;
     margin-left: 39%;
     width: 20%;
@@ -38,10 +49,12 @@ body{
 }
 #username{
     margin-left: 35%;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #userbox{
+    background-color: white;
     position: absolute;
     margin-left: 39%;
     width: 20%;
@@ -50,10 +63,12 @@ body{
 }
 #password{
     margin-left: 35%;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #passcode{
+    background-color: white;
     position: absolute;
     margin-left: 39%;
     width: 20%;
@@ -61,6 +76,7 @@ body{
     border-radius: 9px;
 }
 #signup_button{
+    background-color: yellow;
     position: absolute;
     border-radius: 9px;
     color: black;
@@ -71,7 +87,7 @@ body{
 #sentence{
     text-align: center;
     font-family: Tahoma;
-    color: #394d4d;
+    color: white;
     font-weight: bold;
     font-size: 20px;
 }
@@ -82,6 +98,7 @@ a {
     padding: 10px;
     color: orange;
     height: 30px;
+    font-family: 'Poppins', sans-serif;
   }
 
 a:link {
@@ -104,5 +121,5 @@ header * {
 }  
 
 header li {  
-    margin: 60px;  
+    margin: 75px;  
 }  
