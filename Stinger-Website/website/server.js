@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
+let path = require('path')
 
 //Sets up the post commands
 app.use(express.urlencoded({extended: true}));
@@ -9,7 +10,7 @@ app.use(express.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //EJS setup
-//app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 var MongoClient = require('mongodb').MongoClient
 var client= new MongoClient ("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
@@ -38,56 +39,53 @@ app.post('/login', urlencodedParser, async function(req, res){
 
 });*/
 
-app.use(express.static('website'));
+app.use(express.static('public'));
+
+
+//Setting the routes up in order to render the websites
+const indexRoutes = require('./routes/index.js');
+app.use(indexRoutes);
+
+const loginRoutes = require('./routes/login.js');
+app.use(loginRoutes);
+
+const contactRoutes = require('./routes/contact.js');
+app.use(contactRoutes);
+
+const profile1Routes = require('./routes/profile1.js');
+app.use(profile1Routes);
+
+const signupRoutes = require('./routes/signup.js');
+app.use(signupRoutes);
+
+const aboutRoutes = require('./routes/about.js');
+app.use(aboutRoutes);
+
 
 //Sending the files to load on the localhost
 
 app.get('/', (req, res) => {
-    res.send('./website/index.html', { root: __dirname });
-});
-
-app.get('/', (req, res) => {
-    res.render('./website/index.html', { root: __dirname });
+    res.render('index');
 });
 
 app.get('/contact', (req, res) => {
-    res.send('./server.js/contactus.html', { root: __dirname });
+    res.render('contact');
 });
 
-app.get('/contact', (req, res) => {
-    res.render('./server.js/contactus.html', { root: __dirname });
-});
-
-app.get("/login", function (req, res) {
-    res.send('./server.js/login.html', { root: __dirname });
-})
-
-app.get("/login", function (req, res) {
-    res.render('./server.js/login.html', { root: __dirname });
-})
-
-app.get('/profile', (req, res) => {
-    res.send('./server.js/profile1.html', { root: __dirname });
+app.get('/login', (req, res) => {
+    res.render('login');
 });
 
 app.get('/profile', (req, res) => {
-    res.render('./server.js/profile1.html', { root: __dirname });
-});
-
-app.get('/signup', (req, res) => {
-    res.send('./server.js/signup.html', { root: __dirname });
-});
-
-app.get('/signup', (req, res) => {
-    res.render('./server.js/signup.html', { root: __dirname });
+    res.render('profile1');
 });
 
 app.get('/about', (req, res) => {
-    res.send('./server.js/about.html', { root: __dirname });
+    res.render('about');
 });
 
 app.get('/about', (req, res) => {
-    res.render('./server.js/about.html', { root: __dirname });
+    res.render('signup');
 });
 
 /*
@@ -99,8 +97,12 @@ app.post('/signup', urlencodedParser, function(req,res){
     console.log(req.body);
 });*/
 
-app.get('/', function(req, res) {
-    res.render("server.js");
-})
+app.post('/login', urlencodedParser, function(req, res){
+    console.log(req.body);
+});
+
+app.post('/signup', urlencodedParser, function(req,res){
+    console.log(req.body);
+});
 
 app.listen(port, () => console.log(`listening on port ${port}!`));

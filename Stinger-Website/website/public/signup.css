@@ -1,29 +1,45 @@
-body{
-    background-image: url(hive.jpg);
-    background-position: center;
-}
 #stinger{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #d3eb34;
+    font-family: 'Courier New', Courier, monospace;
+    color: #b8b212;
     font-weight: bold;
+}
+body{
+    background-color:#85640b;
 }
 #statement{
     text-align: center;
-    color: #d3eb34;
+    color: black;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
-#headline{
-    text-align: center;
-    color: #d3eb34;
-    font-size: 20px;
-    font-weight: bolder;
+#fname{
+    margin-left: 35%;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+#fnamebox{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
+}
+#lname{
+    margin-left: 35%;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+#lnamebox{
+    position: absolute;
+    margin-left: 39%;
+    width: 20%;
+    padding: 2px;
+    border-radius: 9px;
 }
 #username{
     margin-left: 35%;
-    color: #e5eb34;
-    font-family: Candara;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 #userbox{
     position: absolute;
@@ -34,7 +50,8 @@ body{
 }
 #password{
     margin-left: 35%;
-    color: #d3eb34;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 #passcode{
     position: absolute;
@@ -43,7 +60,7 @@ body{
     padding: 2px;
     border-radius: 9px;
 }
-#login_button{
+#signup_button{
     position: absolute;
     border-radius: 9px;
     color: black;
@@ -54,7 +71,7 @@ body{
 #sentence{
     text-align: center;
     font-family: Tahoma;
-    color: #d3eb34;
+    color: #394d4d;
     font-weight: bold;
     font-size: 20px;
 }
@@ -65,8 +82,6 @@ a {
     padding: 10px;
     color: orange;
     height: 30px;
-    font-family: 'Poppins', sans-serif;
-
   }
 
 a:link {
@@ -89,5 +104,5 @@ header * {
 }  
 
 header li {  
-    margin: 75px;  
+    margin: 60px;  
 }  

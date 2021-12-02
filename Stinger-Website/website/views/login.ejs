@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
 
+<%#Navigation Bar%>
     <header>  
     <nav>  
     <ul>  
     <li>  
-    <a onclick="window.open('../index.html', '_blank')">Home</a>  
+    <a href='index'>Home</a>  
     </li>  
     <li>  
-    <a onclick="window.open('../login-page/login.html', '_blank')">Login</a>  
+    <a href='login'>Login</a>  
     </li>  
     <li>  
-    <a onclick="window.open('../contact-page/contactus.html', '_blank')">Contact</a>  
+    <a href='contact'>Contact</a>  
     </li>  
     <li> 
-    <a onclick="window.open('../about-page/about.html', '_blank')">About</a>  
+    <a href='about'>About</a>
     </li>  
     </ul>  
     </nav>  
@@ -31,14 +32,16 @@
 <h1 id='stinger'>Stinger</h1>
 <h2 id='statement'>Welcome back.</h2>
 <p id='headline'>Don't miss your opportunity to sting more people.</p>
-<form action="/login" method="POST">
+<form>
     <p id='username'>Username:</p>
     <input type='text' id='userbox' name='username'><br>
     <p id='password'>Password:</p>
     <input type='text' id='passcode' name='password'><br><br>
     <button id='login_button'>Log in</button><br>
     <p id='sentence'>Forgot password?</p>
-    <p id='sentence' onclick="window.open('../signup/signup.html', '_blank')">New to Stinger? Join us here.</p>
+    <p id='sentence' href='about'>New to Stinger? Join us here.</p>
 </form>
+
 </body>
+
 </html>

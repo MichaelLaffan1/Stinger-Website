@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
 
+<%#Navigation Bar%>
     <header>  
     <nav>  
     <ul>  
     <li>  
-    <a onclick="window.open('../index.html', '_blank')">Home</a>  
+    <a href='index'>Home</a>  
     </li>  
     <li>  
-    <a onclick="window.open('../login-page/login.html', '_blank')">Login</a>  
+    <a href='login'>Login</a>  
     </li>  
     <li>  
-    <a onclick="window.open('../contact-page/contactus.html', '_blank')">Contact</a>  
+    <a href='contact'>Contact</a>  
     </li>  
     <li> 
-    <a onclick="window.open('../about-page/about.html', '_blank')">About</a>  
+    <a href='about'>About</a>  
     </li>  
     </ul>  
     </nav>  
@@ -28,9 +29,8 @@
     <link rel='stylesheet' href='signup.css'>
 </head>
 <body>
-    <br>
     <h1 id='stinger'>Stinger</h1>
-    <img id='signupimage' src='../Stinger-Website/signup/wasp.png' alt='wasp.png'>
+<%#The login boxes to sign up within the website%>
     <h2 id='statement'>Welcome to Stinger. Get ready to sting.</h2>
     <form>
         <p id='fname'>First Name:</p>
@@ -42,8 +42,8 @@
         <p id='password'>Password:</p>
         <input type='text' id='passcode' name='password'><br><br><br>
         <button id='signup_button'>Sign Up</button><br>
-        <p id='sentence' onclick="window.open('../login-page/login.html', '_blank')">Already a member? Log in here.</p>
+        <p id='sentence' href='login'>Already a member? Log in here.</p>
     </form>
-
+    
 </body>
 </html>

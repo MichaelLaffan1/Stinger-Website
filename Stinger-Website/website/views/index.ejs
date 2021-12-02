@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
 
+<%#Navigation Bar%>
     <header>  
     <nav>  
     <ul>  
     <li>  
-    <a onclick="window.open('index.html', '_blank')">Home</a>  
+    <a href='index'>Home</a>  
     </li>  
     <li>  
-    <a onclick="window.open('./login-page/login.html', '_blank')">Login</a>
+    <a href='login'>Login</a>
     </li>
     <li>  
-    <a onclick="window.open('./contact-page/contactus.html', '_blank')">Contact</a>  
+    <a href='contact'>Contact</a>  
     </li>  
     <li> 
-    <a onclick="window.open('./about-page/about.html', '_blank')">About</a>
+    <a href='about'>About</a>
     </li>  
     </ul>  
     </nav>  
@@ -34,10 +35,11 @@
 </head>
 <body>
 
+    <%#The example posts in the home page%>
 
     <p> 9/20/21 3:00 PM <br>
-            <input class="profiles" type="button" value="@ReflectiveOfTheThird"
-            onclick="window.open('./profile-page/profilecard.html', '_blank')"> 
+            <input class="profiles" type="button" value="@GoneLikeJackDorsey"
+            href='profile1.ejs'> 
             <br>
         Hey, I just found this website that allows you to generate domain names. I think its pretty sick. Now I don’t have to come up with names on my own anymore.
         Link: https://www.nameboy.com/</p>
@@ -58,6 +60,8 @@
             onclick="window.open('profile.html', '_blank')"> 
         <br>
        Hey I found a website you can use to prank your friends or just have fun! It changes the url of any website to say anything you want. Check it out! Its sgsg.com</p>
+
+
    <hr>
 
 
@@ -103,8 +107,12 @@
          <br>
         
         Finally off work. If my boss keeps testing me I’m never coming in again</p>
+        
+
     <hr>
     <script src="script.js"></script>
 
 </body>
+<%- include('./partials/footer.ejs') %>
+
 </html>
