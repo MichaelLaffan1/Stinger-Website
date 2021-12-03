@@ -64,7 +64,7 @@ app.use(aboutRoutes);
 
 //Sending the files to load on the localhost
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
     res.render('index');
 });
 
