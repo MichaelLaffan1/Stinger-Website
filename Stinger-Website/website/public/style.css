@@ -8,9 +8,7 @@ body{
 }
 
 #wrapper {
-    margin-left:auto;
-    margin-right:auto;
-    width:960px;
+	justify-content: center;
 }
 
 head{
@@ -34,7 +32,6 @@ header {
     background-color: rgb(112, 75, 7);  
     position: fixed;  
     left: 300px;  
-
     right: 300px;  
     top: 0px;  
     height: 20px;  

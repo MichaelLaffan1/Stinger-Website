@@ -81,6 +81,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#wrapper {
+    justify-content: center;
+}
+
 a {
     list-style-type: none;
     text-align: center;
@@ -110,5 +114,5 @@ header * {
 }  
 
 header li {  
-    margin: 75px;  
+    margin: 70px;  
 }  

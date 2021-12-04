@@ -4,10 +4,14 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+
+body {
+	background-color: #999999;
+}
+
 .section{
 	width: 100%;
 	min-height: 100vh;
-	background-color: #999999;
 }
 .container{
 	width: 80%;
@@ -101,13 +105,18 @@
 	}
 }
 
+#wrapper {
+	justify-content: center;
+}
+
 a {
     list-style-type: none;
     text-align: center;
     padding: 10px;
     color: orange;
     height: 30px;
-  }
+	font-family: 'Poppins', sans-serif;
+}
 
 a:link {
     text-decoration: none;
@@ -129,5 +138,5 @@ header * {
 }  
 
 header li {  
-    margin: 80px;  
+    margin: 70px;  
 }  
