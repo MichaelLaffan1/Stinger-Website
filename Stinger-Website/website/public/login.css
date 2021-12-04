@@ -1,29 +1,30 @@
+*{
+    color: black;
+}
+
 body{
-    background-image: url(hive.jpg);
-    background-position: center;
+    background-color: #999999;
 }
 #stinger{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: #d3eb34;
+    color: black;
     font-weight: bold;
 }
 #statement{
     text-align: center;
-    color: #d3eb34;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
 #headline{
     text-align: center;
-    color: #d3eb34;
     font-size: 20px;
     font-weight: bolder;
 }
 #username{
     margin-left: 35%;
-    color: #e5eb34;
-    font-family: Candara;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #userbox{
     position: absolute;
@@ -34,7 +35,8 @@ body{
 }
 #password{
     margin-left: 35%;
-    color: #d3eb34;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #passcode{
     position: absolute;
@@ -44,17 +46,19 @@ body{
     border-radius: 9px;
 }
 #login_button{
+    background-color: #f4c73e;
     position: absolute;
     border-radius: 9px;
     color: black;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 39.5%;
     width: 20%;
 }
 #sentence{
     text-align: center;
-    font-family: Tahoma;
-    color: #d3eb34;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
     font-weight: bold;
     font-size: 20px;
 }

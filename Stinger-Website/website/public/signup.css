@@ -6,50 +6,22 @@
 #stinger{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 body{
-    background-image: url('trees.jpg');
+    background-color: #999999;
     background-size: cover;
 }
 #statement{
     text-align: center;
-    color: white;
+    color: black;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-}
-#fname{
-    margin-left: 35%;
-    color: white;
-    font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
-}
-#fnamebox{
-    background-color: white;
-    position: absolute;
-    margin-left: 39%;
-    width: 20%;
-    padding: 2px;
-    border-radius: 9px;
-}
-#lname{
-    margin-left: 35%;
-    color: white;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#lnamebox{
-    background-color: white;
-    position: absolute;
-    margin-left: 39%;
-    width: 20%;
-    padding: 2px;
-    border-radius: 9px;
 }
 #username{
     margin-left: 35%;
-    color: white;
+    color: black;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -63,7 +35,7 @@ body{
 }
 #password{
     margin-left: 35%;
-    color: white;
+    color: black;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -76,7 +48,7 @@ body{
     border-radius: 9px;
 }
 #signup_button{
-    background-color: yellow;
+    background-color: #f4c73e;
     position: absolute;
     border-radius: 9px;
     color: black;
@@ -85,9 +57,9 @@ body{
     width: 20%;
 }
 #sentence{
-    text-align: center;
-    font-family: Tahoma;
-    color: white;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
     font-weight: bold;
     font-size: 20px;
 }
