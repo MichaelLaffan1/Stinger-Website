@@ -61,7 +61,6 @@ app.use(signupRoutes);
 const aboutRoutes = require('./routes/about.js');
 app.use(aboutRoutes);
 
-
 //Sending the files to load on the localhost
 
 app.get('/index', (req, res) => {
@@ -76,7 +75,7 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
-app.get('/profile', (req, res) => {
+app.get('/profile1', (req, res) => {
     res.render('profile1');
 });
 

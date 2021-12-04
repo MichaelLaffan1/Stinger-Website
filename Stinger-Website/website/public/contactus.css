@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    background: yellow;
+    background: #999999;
     font-family: 'Poppins', sans-serif;
 }
 .container{
@@ -16,12 +16,13 @@ body{
 }
 .contact-left{
     flex-basis: 60%;
+    background: #bcbcbc;
     padding: 40px 60px;
 }
 .contact-right{
     flex-basis: 60%;
     padding: 40px 60px;
-    background: black;
+    background: #545454;
     color: white;
 }
 h1{
@@ -40,25 +41,27 @@ h1{
 }
 input{
     width: 100%;
-    border: none;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid black;
+    border-bottom: 1px solid black;
     outline: none;
+    background-color: #eeeeee;
     padding-bottom: 5px;
 }
 textarea{
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     outline: none;
+    background-color: #eeeeee;
     padding: 10px;
     box-sizing: border-box;
 }
 label{
     margin-bottom: 6px;
     display: block;
-    color: #1c00b5;
+    color: black;
 }
 button{
-    background: yellow;
+    background: #f4c73e;
     width: 100px;
     border: none;
     outline: none;
@@ -85,14 +88,23 @@ tr td{
     padding-top: 20px;
 }
 
+.nav-bar a{
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    color: orange;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
     list-style-type: none;
     text-align: center;
     padding: 10px;
     color: orange;
     height: 30px;
-    font-family: 'Poppins', sans-serif;
-  }
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 a:link {
     text-decoration: none;
