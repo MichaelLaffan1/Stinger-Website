@@ -15,29 +15,39 @@ app.set('view engine', 'ejs');
 var MongoClient = require('mongodb').MongoClient
 var client= new MongoClient ("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
 client.connect();
-var DB = client.db("myProject");
+var db = client.db("myProject");
 
-/*MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err, client) {
+MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err, client) {
   if (err) throw err
 
-  var db = client.db('myFirstDatabase')
+  /*var db = client.db('myProject')*/
 
-  db.collection('students').find().toArray(function (err, result) {
+  db.collection('people').find().toArray(function (err, result) {
     if (err) throw err
-
+    
     console.log(result)
   })
 })
 
-app.post('/login', urlencodedParser, async function(req, res){
-    console.log(req.body);
-    var collection = DB.collection ("users");
+/*db.createUser(
+    {
+      username: "your_username",
+      password: "your_password",
+      roles: [ { role: "users", db: "myProject" } ]
+    }
+  )
+  */
+
+// *** this is a pst request not a get send a form to a server sned a post resquest
+app.get('/login', urlencodedParser, async function(req, res){
+    console.log("get testing");
+    var collection = DB.collection ("people");
     var users = (await collection.find({username:req.body.username}).toArray())
-    if users.length === 0{
-        res.send('./server.js/login.html', { root: __dirname });
+    if( users.length === 0  ){
+        res.send('views/login.ejs', { root: __dirname });
     }
 
-});*/
+});
 
 app.use(express.static('public'));
 
@@ -87,14 +97,14 @@ app.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-/*
+
 app.post('/login', urlencodedParser, function(req, res){
     console.log(req.body);
 });
 
 app.post('/signup', urlencodedParser, function(req,res){
     console.log(req.body);
-});*/
+});
 
 app.post('/login', urlencodedParser, function(req, res){
     console.log(req.body);
