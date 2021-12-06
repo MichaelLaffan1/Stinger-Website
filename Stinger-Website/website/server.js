@@ -20,11 +20,11 @@ var db = client.db("myProject");
 MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err, client) {
   if (err) throw err
 
-  /*var db = client.db('myProject')*/
+ 
 
   db.collection('people').find().toArray(function (err, result) {
     if (err) throw err
-    
+
     console.log(result)
   })
 })
@@ -40,7 +40,7 @@ MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.
 
 // *** this is a pst request not a get send a form to a server sned a post resquest
 app.get('/login', urlencodedParser, async function(req, res){
-    console.log("get testing");
+    console.log('this is a #tag , #thank_you');
     var collection = DB.collection ("people");
     var users = (await collection.find({username:req.body.username}).toArray())
     if( users.length === 0  ){
