@@ -39,6 +39,7 @@ h1 {
 }
 p{
     text-indent: 30px;
+    text-align: center;
 }
 ul{
     list-style-type: none;
@@ -85,3 +86,7 @@ header * {
 header li {  
     margin: 70px;  
 }  
+
+img {
+    align-self: center;
+}
