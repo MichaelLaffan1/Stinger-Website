@@ -52,11 +52,11 @@ app.use(loginRoutes);
 const contactRoutes = require('./routes/contact.js');
 app.use(contactRoutes);
 
-const profile1Routes = require('./routes/profile1.js');
-app.use(profile1Routes);
-
 const signupRoutes = require('./routes/signup.js');
 app.use(signupRoutes);
+
+const profilecardRoutes = require('./routes/profilecard.js');
+app.use(profilecardRoutes);
 
 const aboutRoutes = require('./routes/about.js');
 app.use(aboutRoutes);
@@ -86,6 +86,11 @@ app.get('/about', (req, res) => {
 app.get('/signup', (req, res) => {
     res.render('signup');
 });
+
+app.get('/profilecard', (req, res) => {
+    res.render('profilecard');
+});
+
 
 /*
 app.post('/login', urlencodedParser, function(req, res){
