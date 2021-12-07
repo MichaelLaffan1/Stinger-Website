@@ -18,11 +18,11 @@ client.connect();
 var db = client.db("myProject");
 
 MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err, client) {
-  if (err) throw err
+  //if (err) throw err//
 
  
 
-  db.collection('people').find().toArray(function (err, result) {
+  db.collection('people').find().toArray(function (result) {
     if (err) throw err
 
     console.log(result)
@@ -38,14 +38,50 @@ MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.
   )
   */
 
+//Look at this you silly
 // *** this is a pst request not a get send a form to a server sned a post resquest
 app.get('/login', urlencodedParser, async function(req, res){
     console.log('this is a #tag , #thank_you');
-    var collection = DB.collection ("people");
-    var users = (await collection.find({username:req.body.username}).toArray())
-    if( users.length === 0  ){
-        res.send('views/login.ejs', { root: __dirname });
+    var collection = db.collection ("people");
+    if (req.query.username != undefined&&req.query.password!= undefined){
+        var users = (await collection.find({username:req.query.username}).toArray())
+    //console.log(collection);
+    console.log(users)
+    console.log("username from query: " + users[0].username);
+    console.log("password from query: " + users[0].password);
+
+    console.log("username from req: " + req.query.username);
+    console.log("password from req: " + req.query.password);
+   
+    
+
+    if (req.query.username == users[0].username&&req.query.password == users[0].password){
+        console.log('user can log in')
     }
+
+    else if(req.query.username == users[0].username&&req.query.password != users[0].password){
+        console.log('password is wrong')
+    }
+
+    else
+    {
+        console.log('a user needs to sign up');
+    };
+
+}
+
+
+    //console.log(req.query);
+    console.log(req.query.username);
+    //console.log(res);
+    
+    /*if( users.length === 0  ){
+        //res.send('views/login.ejs', { root: __dirname });
+      res.render('login');
+    }*/
+
+    res.render('login');
+
 
 });
 
@@ -93,8 +129,31 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/signup', (req, res) => {
+app.get('/signup', async function(req, res){
     res.render('signup');
+    console.log("you've signed up!");
+
+    console.log("username from req: " + req.query.username);
+    console.log("password from req: " + req.query.password);
+    var collection = db.collection ("people");
+    var users = (await collection.find({username:req.query.username}).toArray() );
+
+    if(users.length === 0){
+        console.log('user can be saved to database')
+        collection.insertOne({ username:req.query.username, password:req.query.password} );
+    }
+    else
+    {
+        console.log('a user already exists');
+
+        
+    };
+
+
+    console.log(collection.countDocuments() );
+
+
+
 });
 
 
