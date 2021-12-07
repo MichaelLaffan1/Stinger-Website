@@ -17,11 +17,8 @@ var client= new MongoClient ("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l
 client.connect();
 var db = client.db("myProject");
 
-MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err, client) {
-  //if (err) throw err//
-
+MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err) {
  
-
   db.collection('people').find().toArray(function (result) {
     if (err) throw err
 
@@ -29,23 +26,12 @@ MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.
   })
 })
 
-/*db.createUser(
-    {
-      username: "your_username",
-      password: "your_password",
-      roles: [ { role: "users", db: "myProject" } ]
-    }
-  )
-  */
-
-//Look at this you silly
-// *** this is a pst request not a get send a form to a server sned a post resquest
+// *** this is a post request not a get send a form to a server send a post resquest
 app.get('/login', urlencodedParser, async function(req, res){
     console.log('this is a #tag , #thank_you');
     var collection = db.collection ("people");
     if (req.query.username != undefined&&req.query.password!= undefined){
         var users = (await collection.find({username:req.query.username}).toArray())
-    //console.log(collection);
     console.log(users)
     console.log("username from query: " + users[0].username);
     console.log("password from query: " + users[0].password);
@@ -54,35 +40,21 @@ app.get('/login', urlencodedParser, async function(req, res){
     console.log("password from req: " + req.query.password);
    
     
-
     if (req.query.username == users[0].username&&req.query.password == users[0].password){
-        console.log('user can log in')
+        console.log('User logged in')
     }
 
     else if(req.query.username == users[0].username&&req.query.password != users[0].password){
-        console.log('password is wrong')
+        console.log('Incorrect Password')
     }
 
-    else
-    {
-        console.log('a user needs to sign up');
-    };
+    else{
+        console.log('User needs to sign up');
+    }
 
 }
-
-
-    //console.log(req.query);
     console.log(req.query.username);
-    //console.log(res);
-    
-    /*if( users.length === 0  ){
-        //res.send('views/login.ejs', { root: __dirname });
-      res.render('login');
-    }*/
-
     res.render('login');
-
-
 });
 
 app.use(express.static('public'));
@@ -131,7 +103,7 @@ app.get('/about', (req, res) => {
 
 app.get('/signup', async function(req, res){
     res.render('signup');
-    console.log("you've signed up!");
+    console.log("Signup successful");
 
     console.log("username from req: " + req.query.username);
     console.log("password from req: " + req.query.password);
@@ -139,23 +111,15 @@ app.get('/signup', async function(req, res){
     var users = (await collection.find({username:req.query.username}).toArray() );
 
     if(users.length === 0){
-        console.log('user can be saved to database')
+        console.log('User saved to database')
         collection.insertOne({ username:req.query.username, password:req.query.password} );
     }
     else
     {
-        console.log('a user already exists');
-
-        
-    };
-
-
+        console.log('A user already exists');  
+    }
     console.log(collection.countDocuments() );
-
-
-
 });
-
 
 app.post('/login', urlencodedParser, function(req, res){
     console.log(req.body);
@@ -178,8 +142,8 @@ app.use(function (err, req, res, next) {
     res.status(500).send('Something broke!')
   })
 
-/*app.use(function (req, res, next) {
+app.use(function (req, res, next) {
     res.status(404).send("404 Not Found")
-})*/
+})
 
 app.listen(port, () => console.log(`listening on port ${port}!`));
