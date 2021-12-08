@@ -51,7 +51,6 @@ app.get('/login', urlencodedParser, async function(req, res){
     else{
         console.log('User needs to sign up');
     }
-
 }
     console.log(req.query.username);
     res.render('login');
@@ -108,11 +107,11 @@ app.get('/signup', async function(req, res){
     console.log("username from req: " + req.query.username);
     console.log("password from req: " + req.query.password);
     var collection = db.collection ("people");
-    var users = (await collection.find({username:req.query.username}).toArray() );
+    var users = (await collection.find({username:req.query.username}).toArray());
 
     if(users.length === 0){
         console.log('User saved to database')
-        collection.insertOne({ username:req.query.username, password:req.query.password} );
+        collection.insertOne({username:req.query.username, password:req.query.password});
     }
     else
     {
