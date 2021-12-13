@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 let path = require('path')
+// const passport = require('passport');
+// const local = require('./strategies/local.js');
+
+// const authRoute = require('./routes/auth.js');
 
 //Sets up the post commands
 app.use(express.urlencoded({extended: true}));
@@ -13,22 +17,20 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.set('view engine', 'ejs');
 
 var MongoClient = require('mongodb').MongoClient
-var client= new MongoClient ("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
+var client = new MongoClient ("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
 client.connect();
 var db = client.db("myProject");
 
 MongoClient.connect("mongodb+srv://Student:CorgisAreDope@cluster0.h6c8l.mongodb.net/test?authSource=admin&replicaSet=atlas-13gy8k-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", function (err) {
- 
   db.collection('people').find().toArray(function (result) {
     if (err) throw err
-
     console.log(result)
   })
 })
 
 // *** this is a post request not a get send a form to a server send a post resquest
 app.get('/login', urlencodedParser, async function(req, res){
-    console.log('this is a #tag , #thank_you');
+    console.log('Login Page');
     var collection = db.collection ("people");
     if (req.query.username != undefined&&req.query.password!= undefined){
         var users = (await collection.find({username:req.query.username}).toArray())
@@ -78,6 +80,9 @@ app.use(signupRoutes);
 const aboutRoutes = require('./routes/about.js');
 app.use(aboutRoutes);
 
+//app.use(passport.initialize());
+//app.use(passport.session());
+
 //Sending the files to load on the localhost
 
 app.get('/index', (req, res) => {
@@ -109,12 +114,11 @@ app.get('/signup', async function(req, res){
     var collection = db.collection ("people");
     var users = (await collection.find({username:req.query.username}).toArray());
 
-    if(users.length === 0){
+    if(users.length === 0) {
         console.log('User saved to database')
         collection.insertOne({username:req.query.username, password:req.query.password});
     }
-    else
-    {
+    else {
         console.log('A user already exists');  
     }
     console.log(collection.countDocuments() );
