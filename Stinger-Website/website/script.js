@@ -1,6 +1,8 @@
 const passport = require('passport');
 
 
+//Unused file
+
 app.post('/login',
   passport.authenticate('local'),
   function(req, res) {
