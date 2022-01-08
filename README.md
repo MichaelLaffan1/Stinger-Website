@@ -1,4 +1,4 @@
-# SoftwareDev2Group5
+# Stinger-Website
 
 Below is a summary of what we did for our project. It was split into three assignments, with a final part added on in the end.
 
