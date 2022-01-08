@@ -1,4 +1,6 @@
 # SoftwareDev2Group5
+
+Below is a summary of what we did for our project. It was split into three assignments, with a final part added on in the end.
 For the first assignment, we created a sample page
 of what a blog page looks like. We created posts and
 and put in an icon to make the website look more neat.
